@@ -27,7 +27,7 @@ const typeDefs = gql`
 `;
 
 // リゾルバーの定義
-const resolvers: Resolvers = {
+const resolvers = {
   Query: {
     tasks: async () => await prisma.task.findMany(),
     task: async (_parent: any, args: any) =>
